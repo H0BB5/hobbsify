@@ -6,6 +6,7 @@ As a personal challenge I have decided to try and create a serverless Spotify cl
 * Typescript
 * A bootstrapped UI for speed (undecided on which one)
 * Postgres for db 
+* Prisma
 
 ### Success Criteria
 * Should have user login/authentication 
@@ -15,6 +16,17 @@ As a personal challenge I have decided to try and create a serverless Spotify cl
 * Song playback 
 * Runs serverless with hosted database 
 
+
+### Prisma 
+First time using prisma to update db and schema (auto generates SQL structure). 
+So far very cool experience, especially regarding seeding data – added seed script to package.json 
+
+
+Following commands to modify or update db: 
+* `npx prisma migrate dev` – pushes schema updates (essentially a git commit to the db)
+* `npx prisma push` 
+* `npx prisma pull`
+* `npx prisma studio` 
 
 ### Postgres DB is hosted on Google Cloud 
 * Normally wouldn't include .env file but to run locally it is in here with the access credentials
