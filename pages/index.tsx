@@ -5,7 +5,8 @@ import { useMe } from '../lib/hooks'
 import prisma from '../lib/prisma'
 
 const Home = ({ artists }) => {
-  const { user, error } = useMe()
+  const { user, isLoading } = useMe()
+
   return (
     <GradientLayout
       roundImage
@@ -13,7 +14,8 @@ const Home = ({ artists }) => {
       color="green"
       subtitle="profile"
       image="/ollie.jpg"
-      description="15 public playlists"
+      description={`${user?.playlistsCount} public playlists`}
+      isLoading={isLoading}
     >
       <Flex>
         {artists.map((artist) => (
@@ -41,9 +43,8 @@ const Home = ({ artists }) => {
 }
 
 export const getServerSideProps = async () => {
-  // has access to JWT, cookie, and auth
   const artists = await prisma.artist.findMany({})
-  console.log(artists)
+
   return {
     props: { artists }
   }

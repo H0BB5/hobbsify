@@ -63,7 +63,11 @@ const Sidebar = () => {
     >
       <Box paddingY="20px" height="100%">
         <Box marginBottom="20px" paddingX="20px">
-          <NextImage src="/hobbsify.svg" height={75} width={150} />
+          <LinkBox _hover={{ cursor: 'pointer' }}>
+            <NextLink href="/">
+              <NextImage src="/hobbsify.svg" height={75} width={150} />
+            </NextLink>
+          </LinkBox>
         </Box>
         <Box marginBottom="20px">
           <List spacing={2}>
@@ -118,7 +122,7 @@ const Sidebar = () => {
                   <NextLink
                     href={{
                       pathname: '/playlist/[id]',
-                      query: { id: playlist.name }
+                      query: { id: playlist.id }
                     }}
                     passHref
                   >
