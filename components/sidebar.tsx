@@ -63,7 +63,7 @@ const Sidebar = () => {
     >
       <Box paddingY="20px" height="100%">
         <Box marginBottom="20px" paddingX="20px">
-          <NextImage src="/katify.svg" height={60} width={120} />
+          <NextImage src="/hobbsify.svg" height={75} width={150} />
         </Box>
         <Box marginBottom="20px">
           <List spacing={2}>
@@ -71,7 +71,9 @@ const Sidebar = () => {
               <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
                 <LinkBox>
                   <NextLink href={menu.route} passHref>
-                    <LinkOverlay>
+                    <LinkOverlay
+                      _hover={{ cursor: 'pointer', color: 'gray.200' }}
+                    >
                       <ListIcon
                         as={menu.icon}
                         color="white"
@@ -91,7 +93,9 @@ const Sidebar = () => {
               <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
                 <LinkBox>
                   <NextLink href={menu.route} passHref>
-                    <LinkOverlay>
+                    <LinkOverlay
+                      _hover={{ cursor: 'pointer', color: 'gray.200' }}
+                    >
                       <ListIcon
                         as={menu.icon}
                         color="white"
@@ -118,7 +122,11 @@ const Sidebar = () => {
                     }}
                     passHref
                   >
-                    <LinkOverlay>{playlist.name}</LinkOverlay>
+                    <LinkOverlay
+                      _hover={{ cursor: 'pointer', color: 'gray.200' }}
+                    >
+                      {playlist.name}
+                    </LinkOverlay>
                   </NextLink>
                 </LinkBox>
               </ListItem>

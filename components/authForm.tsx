@@ -27,7 +27,7 @@ const AuthForm: FC<{ mode: 'signin' | 'signup' }> = ({ mode }) => {
         height="100px"
         borderBottom="1px solid white"
       >
-        <NextImage src="/katify.svg" width={170} height={55} />
+        <NextImage src="/hobbsify.svg" width={170} height={55} />
       </Flex>
 
       <Flex
