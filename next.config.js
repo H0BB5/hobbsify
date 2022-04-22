@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true
-}
 module.exports = {
+  reactStrictMode: true,
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if
@@ -16,5 +14,3 @@ module.exports = {
     ignoreDuringBuilds: true
   }
 }
-
-module.exports = nextConfig
