@@ -65,7 +65,7 @@ const Sidebar = () => {
         <Box marginBottom="20px" paddingX="20px">
           <LinkBox _hover={{ cursor: 'pointer' }}>
             <NextLink href="/">
-              <NextImage src="/hobbsify.svg" height={75} width={150} />
+              <NextImage src="/katify.svg" height={75} width={150} />
             </NextLink>
           </LinkBox>
         </Box>
