@@ -28,7 +28,8 @@ Following commands to modify or update db:
 * `npx prisma studio` 
 
 ### Postgres DB is hosted on Google Cloud 
-* Normally wouldn't include .env file but to run locally it is in here with the access credentials
+* Normally wouldn't include .env file but to run locally it is in here with the access credentials 
+* .env variables (JWT token name etc.. are not removed to .env either)
  
 
 #### State 

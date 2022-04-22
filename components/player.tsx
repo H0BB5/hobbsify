@@ -198,7 +198,7 @@ const Player = ({ songs, activeSong }) => {
               aria-label={[`min`, `max`]}
               step={0.1}
               min={0}
-              max={duration ? duration.toFixed(2) : 0}
+              max={duration ? (duration.toFixed(2) as unknown as number) : 0} // rush to fix ts error
               id="player-ranger"
               onChange={onSeek}
               value={[seek]} // needs to be an array for this range slider
