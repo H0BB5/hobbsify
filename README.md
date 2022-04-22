@@ -16,7 +16,6 @@ As a personal challenge I have decided to try and create a serverless Spotify cl
 * Song playback 
 * Runs serverless with hosted database 
 
-
 ### Prisma 
 First time using prisma to update db and schema (auto generates SQL structure). 
 So far very cool experience, especially regarding seeding data – added seed script to package.json 
@@ -31,6 +30,14 @@ Following commands to modify or update db:
 ### Postgres DB is hosted on Google Cloud 
 * Normally wouldn't include .env file but to run locally it is in here with the access credentials
  
+
+#### State 
+
+Management using easy-peasy library as lightweight alternative to Redux.
+
+#### React Howler
+Component to handle the song timelines similar to Web Audio API & HTML Player only with more controls for UI (wish it was a hook but couldn't find anything that exists)
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
