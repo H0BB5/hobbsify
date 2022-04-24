@@ -89,9 +89,9 @@ const Player = ({ songs, activeSong }) => {
           // recursion the case where new random === current song
           return nextSong()
         }
-      } else {
-        return state === songs.length - 1 ? 0 : state + 1
+        return next
       }
+      return state === songs.length - 1 ? 0 : state + 1
     })
   }
 
@@ -132,7 +132,7 @@ const Player = ({ songs, activeSong }) => {
             onClick={onShuffle}
             color={shuffle ? 'white' : 'gray.600'}
             outline="none"
-            variant="link-variant"
+            variant="link"
             aria-label="shuffle"
             fontSize="24px"
             icon={<MdShuffle />}
@@ -140,7 +140,7 @@ const Player = ({ songs, activeSong }) => {
           <IconButton
             onClick={prevSong}
             outline="none"
-            variant="link-variant"
+            variant="link"
             aria-label="previous"
             fontSize="24px"
             icon={<MdSkipPrevious />}
@@ -150,7 +150,7 @@ const Player = ({ songs, activeSong }) => {
             <IconButton
               onClick={() => setPlayState(false)}
               outline="none"
-              variant="link-variant"
+              variant="link"
               aria-label="play"
               fontSize="40px"
               color="white"
@@ -160,7 +160,7 @@ const Player = ({ songs, activeSong }) => {
             <IconButton
               onClick={() => setPlayState(true)}
               outline="none"
-              variant="link-variant"
+              variant="link"
               aria-label="play"
               fontSize="40px"
               color="white"
@@ -170,7 +170,7 @@ const Player = ({ songs, activeSong }) => {
           <IconButton
             onClick={nextSong}
             outline="none"
-            variant="link-variant"
+            variant="link"
             aria-label="next"
             fontSize="24px"
             icon={<MdSkipNext />}
@@ -179,7 +179,7 @@ const Player = ({ songs, activeSong }) => {
             onClick={onRepeat}
             color={repeat ? 'white' : 'gray.600'}
             outline="none"
-            variant="link-variant"
+            variant="link"
             aria-label="repeat"
             fontSize="24px"
             icon={<MdOutlineRepeat />}
